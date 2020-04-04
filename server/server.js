@@ -31,8 +31,8 @@ db.on('error', error => {
 db.once('open', async () => {
     console.info("Connected to mongoose");
 });
-app.get('/', function(req, res){
-   res.redirect('/register');
+app.get("*", function(req, res){
+  res.sendFile(path.join(__dirname + “../client/build/index.html”));
 });
 app.use(require('./routes'));
 
