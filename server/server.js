@@ -11,15 +11,15 @@ const { LOCAL_MONGODB_URI, MONGODB_URI, PORT, SESSION_SECRET } = process.env;
 const app = express();
 
 app.use(function(req, res, next) {
-res.header(“Access-Control-Allow-Origin”, “*”);
-res.header(“Access-Control-Allow-Methods”, “GET,PUT,POST,DELETE”);
+res.header("Access-Control-Allow-Origin", "*");
+res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
 res.header(
-“Access-Control-Allow-Headers”,
-“Origin, X-Requested-With, Content-Type, Accept”
+"Access-Control-Allow-Headers",
+"Origin, X-Requested-With, Content-Type, Accept"
 );
 next();
 });
-app.options(“*”, cors());
+app.options("*", cors());
 //app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
