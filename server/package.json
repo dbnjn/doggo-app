@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd server && npm install && nodemon server.js",
-     "heroku-postbuild": "cd client && npm install && npm run build" 
+     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +22,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
-  }
+  },
+  "engines": {
+   "node": "10.x"
+ }
 }
