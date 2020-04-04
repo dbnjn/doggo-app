@@ -20,7 +20,7 @@ app.use(session({ secret: SESSION_SECRET, cookie: { maxAge: 60000 }, resave: fal
 //Configure mongoose
 
 mongoose.connect(/* LOCAL_MONGODB_URI || */ MONGODB_URI,
-    { 
+    {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });
@@ -31,15 +31,11 @@ db.on('error', error => {
 db.once('open', async () => {
     console.info("Connected to mongoose");
 });
-
+app.get('/', function(req, res){
+   res.redirect('/register');
+});
 app.use(require('./routes'));
 
 
 // PORT to be taken from .env
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-
-
-
-
-
