@@ -1,4 +1,4 @@
-const BASE_URI = "http://localhost:5555/api";
+const BASE_URI = `https://doggodebanjan.herokuapp.com:${process.env.PORT}/api`;
 const DOG_CEO_BASE_URI = "https://dog.ceo/api";
 
 export {
